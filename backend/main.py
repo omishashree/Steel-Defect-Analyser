@@ -12,7 +12,7 @@ from tensorflow.keras.preprocessing import image
 # LOAD TRAINED MODEL
 # ==============================
 
-model = load_model("model/steel_defect_mobilenet.h5",compile=False)
+model = load_model("model/steel_defect_mobilenet.keras",compile=False)
 
 # ==============================
 # CLASS LABELS
