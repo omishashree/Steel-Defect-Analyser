@@ -8,6 +8,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 
+import tensorflow as tf
+import keras
+
+print("TensorFlow:", tf.__version__)
+print("Keras:", keras.__version__)
 # ==============================
 # LOAD TRAINED MODEL
 # ==============================
