@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { FaUpload, FaRobot } from "react-icons/fa";
 import "./App.css";
-
+const API_URL = import.meta.env.VITE_API_URL;
 const defectDescriptions = {
   crazing:
     "Surface cracks caused by thermal or mechanical stress.",
@@ -55,10 +55,9 @@ function App() {
       setLoading(true);
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/predict",
-        formData
-      );
-
+  `${API_URL}/predict`,
+  formData
+);
       setPrediction(response.data.prediction);
       setConfidence(response.data.confidence);
     } catch (error) {
